@@ -12,27 +12,18 @@ public class Main {
 
         for (int i = 0; i < N; i++) {
             String word = br.readLine();
-            if (!isCycleWordExists(words, word)) {
+            boolean isCycle = false;
+            for (String w : words) {
+                if (w.length() == word.length() && (w + w).contains(word)) {
+                    isCycle = true;
+                    break;
+                }
+            }
+            if (!isCycle) {
                 words.add(word);
             }
         }
 
         System.out.println(words.size());
-    }
-
-    public static boolean isCycleWordExists(List<String> words, String word) {
-        for (String w : words) {
-            if (isCycle(w, word)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean isCycle(String word1, String word2) {
-        if (word1.length() != word2.length()) return false;
-
-        String combine = word1 + word1;
-        return combine.contains(word2);
     }
 }
