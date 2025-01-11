@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class Min {
     public int[] solution(String[] genres, int[] plays) {
 
         // 장르별 재생 횟수
