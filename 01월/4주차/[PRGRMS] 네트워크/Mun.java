@@ -1,4 +1,4 @@
-class Solution {
+class Mun {
     boolean[] visited;
     int[][] link;
     int max;

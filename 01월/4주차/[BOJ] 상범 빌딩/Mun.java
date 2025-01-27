@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Mun {
     static String ansFormat = "Escaped in %d minute(s).";
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
